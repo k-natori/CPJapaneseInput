@@ -1,0 +1,7 @@
+SSID:YOUR_WIFI_SSID
+PASS:YOUR_WIFI_PASSWORD
+KanaDicFileName:/kanadic.txt
+SKKDicFileName:/SKK-JISYO.M
+BlueSkyPEM:/bsky-social.pem
+BlueSkyName:YOUR_BLUESKY_ACCOUNT
+BlueSkyPass:YOUR_BLUESKY_APP_PASSWORD

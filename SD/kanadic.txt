@@ -37,6 +37,12 @@ sho:しょ
 sya:しゃ
 syu:しゅ
 syo:しょ
+ja:じゃ
+ju:じゅ
+jo:じょ
+jya:じゃ
+jyu:じゅ
+jyo:じょ
 ta:た
 ti:ち
 chi:ち
@@ -127,3 +133,5 @@ xyu:ゅ
 xyo:ょ
 tt:っ
 -:ー
+,:、
+.:。
