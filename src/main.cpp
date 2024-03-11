@@ -3,10 +3,12 @@
 #include <M5GFX.h>
 #include <WiFi.h>
 #include "JPutil.h"
+
 #include "TextAction.h"
 #include "SaveAction.h"
 #include "QRAction.h"
 #include "BlueSkyAction.h"
+#include "EMailAction.h"
 
 #define defaultKanaDicFileName "/kanadic.txt"
 #define defaultSKKDicFileName "/SKK-JISYO.M"
@@ -47,7 +49,8 @@ int16_t kanjiIndex = -1;
 SaveAction saveAction;
 QRAction qrAction;
 BlueSkyAction blueSkyAction;
-std::vector<TextAction *> actionVector = {&saveAction, &qrAction, &blueSkyAction};
+EMailAction emailAction;
+std::vector<TextAction *> actionVector = {&saveAction, &qrAction, &blueSkyAction, &emailAction};
 int actionIndex = -1;
 
 // Function prototypes
@@ -122,6 +125,16 @@ void setup()
           BlueSkyAction::setAccountName(content);
         else if (key == "BlueSkyPass")
           BlueSkyAction::setAppPassword(content);
+
+        // E-mail
+        else if (key == "GMailAccount")
+          EMailAction::setAccountName(content);
+        else if (key == "GMailPassword")
+          EMailAction::setPassword(content);
+        else if (key == "EMailReceiver")
+          EMailAction::setReceiver(content);
+        else if (key == "EMailSubjectLine")
+          EMailAction::setMakeFirstLineSubject(content.length() > 0);
       }
     }
     settingFile.close();
